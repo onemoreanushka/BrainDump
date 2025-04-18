@@ -6,14 +6,14 @@ import Lottie from "lottie-react";
 function Blog() {
   return (
     <>
-      <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
+      <div className="blog relative w-full h-[870px] flex flex-col items-center justify-center overflow-hidden">
         
         {/* Background Animation */}
         <Lottie
           animationData={nightsky}
           loop
           autoplay
-          className="absolute top-0 left-0 w-full h-full z-0"
+          className="absolute top-0 left-0 w-full z-0"
         />
 
         {/* Foreground Content */}

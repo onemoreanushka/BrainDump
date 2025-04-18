@@ -1,5 +1,9 @@
-body{
-    background-color: rgb(7, 7, 34);
+.home {
+    background: linear-gradient(to bottom, #87ceeb, #4682b4, #1e3a5d);
+}
+  
+.blog{
+    background: linear-gradient(to bottom, #2e1a47, #510886, #ffffff);
 }
 
 .glass{
