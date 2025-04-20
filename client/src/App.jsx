@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/blog/:id' element={<ReadtheBraindump></ReadtheBraindump>}></Route>
+        <Route path="/blog/:slug" element={<ReadtheBraindump />} />
         <Route path='/knowme' element={<KnowMe></KnowMe>}></Route>
       </Routes>
     </>

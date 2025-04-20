@@ -4,18 +4,3 @@ Output:
 
 Exit Code: 0
 ----
-Command: cd client
-Output:
-bash: cd: client: No such file or directory
-Exit Code: 1
-----
-Command: cd client
-Output:
-bash: cd: client: No such file or directory
-Exit Code: 1
-----
-Command: cd client
-Output:
-bash: cd: client: No such file or directory
-Exit Code: 1
-----

@@ -2,6 +2,7 @@ import BlogCard from "../components/BlogCard";
 import BlogData from "../BlogData";
 import nightsky from "../assets/nightsky.json";
 import Lottie from "lottie-react";
+import { Link } from "react-router-dom";
 
 function Blog() {
   return (
@@ -25,6 +26,7 @@ function Blog() {
               key={blog.id}
               title={blog.title}
               description={blog.description}
+              slug={blog.slug}
             />
           ))}
         </div>
