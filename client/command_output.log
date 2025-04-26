@@ -4,3 +4,18 @@ Output:
 
 Exit Code: 0
 ----
+Command: shopt -s histappend
+Command: shopt -s histappend
+Output:
+Output:
+
+Exit Code: 0
+----
+
+Exit Code: 0
+----
+Command: cd client
+Output:
+bash: cd: client: No such file or directory
+Exit Code: 1
+----

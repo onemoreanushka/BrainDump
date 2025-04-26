@@ -1,34 +1,24 @@
-require('dotenv').config();
-const mongoose = require('mongoose');
 const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+require('dotenv').config();  // <-- Load env file
+
 const app = express();
-const PORT = process.env.PORT || 2000;
 
-
-mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => console.log('🗄️  Connected to MongoDB'))
-  .catch(err => console.error('❌ Mongo connection error:', err));
-
-
-// parse JSON bodies
+app.use(cors());
 app.use(express.json());
 
-// Root route
-app.get('/', (req, res) => {
-  console.log('🔥  GET / was hit');
-  res.send('Welcome to The Archive 📝✨');
+// Connect DB
+mongoose.connect(process.env.MONGO_URI);
+
+mongoose.connection.once('open', () => {
+  console.log('✅ MongoDB connected to database:', mongoose.connection.name);
 });
 
-// Catch‑all for any other route
-app.use((req, res) => {
-  console.log(`⚠️  No route for ${req.method} ${req.url}`);
-  res.status(404).send('Route not found');
-});
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+// Use your blog routes
+app.use('/api/blogs', require('./routes/blog'));
+
+app.listen(2000, () => {
+  console.log('Server running on port 2000');
 });
