@@ -70,12 +70,12 @@ function KnowMe() {
   }
 
   return (
-    <div className="bg-gray-800 relative w-full h-screen flex flex-col items-center justify-center object-cover overflow-hidden">
+    <div className="bg-black relative w-full h-screen flex flex-col items-center justify-center object-cover overflow-hidden">
       <Lottie
         animationData={landscape3}
         loop
         autoplay
-        className="absolute top-0 left-0 w-full z-0 opacity-70"
+        className="absolute top-0 left-0 w-full z-0 opacity-50"
       />
       <img
         src={image}

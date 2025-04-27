@@ -22,7 +22,7 @@ function ReadtheBraindump() {
 
   if (!blog) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className="min-h-screen text-white flex items-center justify-center">
         Loading...
       </div>
     );
@@ -30,10 +30,17 @@ function ReadtheBraindump() {
 
   return (
     <div className="bg-black relative w-full min-h-screen flex flex-col items-center justify-center object-cover overflow-hidden">
-      <Lottie animationData={landscape1} loop autoplay className="absolute top-0 left-0 w-full z-0 opacity-50" />
-      <div className="glass z-10 p-4 rounded-xl text-white">
-        <h1 className="text-3xl font-bold">{blog.title}</h1>
-        <p className="mt-4">{blog.description}</p>
+      <Lottie
+        animationData={landscape1}
+        loop
+        autoplay
+        className="absolute top-0 left-0 w-full z-0 opacity-50"
+      />
+      <div className="glass z-10 p-8 text-white w-1/2 mt-20 h-[520px]">
+        <h1 className="text-3xl font-bold text-center">{blog.title}</h1>
+        <div className="mt-2 h-5/6 overflow-y-auto">
+          <p className="description">{blog.description}</p>
+        </div>
       </div>
     </div>
   );

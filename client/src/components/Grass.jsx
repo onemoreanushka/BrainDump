@@ -4,7 +4,7 @@ import grass from "/Users/anushkajha/Desktop/The Archive/client/src/assets/grass
 function Grass() {
   return (
       <>
-        <div className="flex items-end justify-start h-full gap-0">
+        <div className="flex items-end justify-start h-full gap-0 opacity-60">
           <Lottie animationData={grass} loop autoplay style={{ width: "10%", height: "10%" }} />
           <Lottie animationData={grass} loop autoplay style={{ width: "10%", height: "10%" }} />  
           <Lottie animationData={grass} loop autoplay style={{ width: "10%", height: "10%" }} />
