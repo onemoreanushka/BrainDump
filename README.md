@@ -30,5 +30,5 @@ Write blog from UI? Eventually.
 
 Search? Sorting? Tags? Who knows. Depends on the next overthinking spiral.
 
-Still here? Go read a blog. Or better — dump your own.
+Still here? Go read a blog. (lemme deploy it though)
 
